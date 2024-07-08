@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Patient Registration Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-4">
+        <h2 class="header text-center">New Patient Registration Form</h2>
+        <form action="http://localhost:3600/submitPatient" method="POST" class="needs-validation" novalidate>
+            <!-- Personal Information -->
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="PatientID">Patient ID</label>
+                    <input type="number" class="form-control" id="PatientID" name="PatientID" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="GivenName">Given Name</label>
+                    <input type="text" class="form-control" id="GivenName" name="GivenName" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="MiddleName">Middle Name</label>
+                    <input type="text" class="form-control" id="MiddleName" name="MiddleName">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="LastName">Last Name</label>
+                    <input type="text" class="form-control" id="LastName" name="LastName" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="PreferredName">Preferred Name</label>
+                    <input type="text" class="form-control" id="PreferredName" name="PreferredName">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="DateOfBirth">Date of Birth</label>
+                    <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Gender">Gender</label>
+                    <select class="form-control" id="Gender" name="Gender" required>
+                        <option value="">Choose...</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="PostalAddress">Postal Address</label>
+                    <input type="text" class="form-control" id="PostalAddress" name="PostalAddress">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="HomePhone">Home Phone</label>
+                    <input type="tel" class="form-control" id="HomePhone" name="HomePhone">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="WorkPhone">Work Phone</label>
+                    <input type="tel" class="form-control" id="WorkPhone" name="WorkPhone">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Mobile">Mobile</label>
+                    <input type="tel" class="form-control" id="Mobile" name="Mobile">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="EmailAddress">Email Address</label>
+                    <input type="email" class="form-control" id="EmailAddress" name="EmailAddress">
+                </div>
+            </div>
+
+            <!-- Medicare Information -->
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="MedicareNumber">Medicare Number</label>
+                    <input type="text" class="form-control" id="MedicareNumber" name="MedicareNumber">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="ReferenceNumber">Reference Number</label>
+                    <input type="text" class="form-control" id="ReferenceNumber" name="ReferenceNumber">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="MedicareExpiryDate">Medicare Expiry Date</label>
+                    <input type="date" class="form-control" id="MedicareExpiryDate" name="MedicareExpiryDate">
+                </div>
+            </div>
+
+            <!-- Pension and Concession Information -->
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="PensionNumber">Pension Number</label>
+                    <input type="text" class="form-control" id="PensionNumber" name="PensionNumber">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="ConcessionCardNumber">Concession Card Number</label>
+                    <input type="text" class="form-control" id="ConcessionCardNumber" name="ConcessionCardNumber">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="ConcessionExpiryDate">Concession Expiry Date</label>
+                    <input type="date" class="form-control" id="ConcessionExpiryDate" name="ConcessionExpiryDate">
+                </div>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="EmergencyContactName">Emergency Contact Name</label>
+                    <input type="text" class="form-control" id="EmergencyContactName" name="EmergencyContactName">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="EmergencyContactRelationship">Relationship to Patient</label>
+                    <input type="text" class="form-control" id="EmergencyContactRelationship" name="EmergencyContactRelationship">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="EmergencyContactPhone">Emergency Contact Phone</label>
+                    <input type="tel" class="form-control" id="EmergencyContactPhone" name="EmergencyContactPhone">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="NextOfKinName">Next of Kin Name</label>
+                    <input type="text" class="form-control" id="NextOfKinName" name="NextOfKinName">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="NextOfKinRelationship">Relationship to Patient</label>
+                    <input type="text" class="form-control" id="NextOfKinRelationship" name="NextOfKinRelationship">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="NextOfKinPhone">Next of Kin Phone</label>
+                    <input type="tel" class="form-control" id="NextOfKinPhone" name="NextOfKinPhone">
+                </div>
+            </div>
+
+            <!-- Medical Information -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Allergies">Allergies</label>
+                    <textarea class="form-control" id="Allergies" name="Allergies" rows="3"></textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="MedicalConditions">Medical Conditions</label>
+                    <textarea class="form-control" id="MedicalConditions" name="MedicalConditions" rows="3"></textarea>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="ChildhoodImmunisationCompleted">Childhood Immunisation Completed</label>
+                    <select class="form-control" id="ChildhoodImmunisationCompleted" name="ChildhoodImmunisationCompleted">
+                        <option value="">Choose...</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="OverseasStudent">Overseas Student</label>
+                    <select class="form-control" id="OverseasStudent" name="OverseasStudent">
+                        <option value="">Choose...</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="PrivateInsuranceDetails">Private Insurance Details</label>
+                    <input type="text" class="form-control" id="PrivateInsuranceDetails" name="PrivateInsuranceDetails">
+                </div>
+            </div>
+
+            <!-- Interpreter Information -->
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="RequireInterpreter">Require Interpreter</label>
+                    <select class="form-control" id="RequireInterpreter" name="RequireInterpreter">
+                        <option value="">Choose...</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-9">
+                    <label for="InterpreterLanguage">Interpreter Language</label>
+                    <input type="text" class="form-control" id="InterpreterLanguage" name="InterpreterLanguage">
+                </div>
+            </div>
+
+            <!-- Guardian Information (for children) -->
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="GuardianName">Guardian Name</label>
+                    <input type="text" class="form-control" id="GuardianName" name="GuardianName">
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="Ethnicity">Ethnicity</label>
+                    <input type="text" class="form-control" id="Ethnicity" name="Ethnicity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="CountryOfBirth">Country of Birth</label>
+                    <input type="text" class="form-control" id="CountryOfBirth" name="CountryOfBirth">
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="SpokenLanguage">Spoken Language</label>
+                    <input type="text" class="form-control" id="SpokenLanguage" name="SpokenLanguage">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
